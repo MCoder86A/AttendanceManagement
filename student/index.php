@@ -9,7 +9,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./asset/style.css?version=1.0.2">
+  <link rel="icon" href="https://nulphary.sirv.com/Images/fabicon.png" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="./asset/style.css?version=1.0.3">
+  <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
 </head>
 
 <body>
@@ -49,19 +51,22 @@
         foreach ($_required_row as $key) {
           printf(
             '<li>
-              <a href="#" class="classroom">
+              <a href="./stats.php?std=%s&sub=%s" class="classroom">
                 <div class="item">%s</div>
               </a>
               <div class="start_ico">
-                <a href="./live/?std=%s&sub=%s"><img src="../asset/image/raiseh.png"></a>
+                <a href="./live/?std=%s&sub=%s"><img src="https://nulphary.sirv.com/Images/raiseh.png"></a>
               </div>
             </li>',
+            $_SESSION["userinfo"]["userinfo"]["standard"],
+            $key,
             $key,
             $_SESSION["userinfo"]["userinfo"]["standard"],
             $key
           );
         }
-
+        // <i style="font-size:1.5em;color: #14bddb;" class="fas fa-hand-paper"></i>
+        
         ?>
 
       </ul>

@@ -13,10 +13,48 @@ import {
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-document.getElementById("startLstn").addEventListener("click", startListen, false);
+var listenBtn = document.getElementById("startLstn");
+listenBtn.addEventListener("click", startListen, false);
+
 var startflag = false;
 
+function show_initMsg() {
+    anime({
+        targets: listenBtn,
+        scale: [1, 1.2]
+    })
+}
+function show_req() {
+    anime({
+        targets: ".req .name",
+        scale : [0,1],
+        easing: 'linear',
+        duration: 200,
+    })
+    anime({
+        targets: ".req .otpShow",
+        scale : [0,1],
+        easing: 'linear',
+        duration: 200,
+        delay: 100,
+    })
+}
+
+function a_init() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        // var xhhtp_res = JSON.parse(this.responseText);
+    };
+
+    var args = `SUB=${sub}&STD=${std}`;
+    xhttp.open("POST", "./init.php");
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhttp.send(args);
+}
+
 function startListen() {
+    a_init();
+
     const firebaseConfig = {
         apiKey: "AIzaSyAoW6MBFQ_Oc1ijljSEcmjDg28gQ-15EK8",
         authDomain: "regify-67daa.firebaseapp.com",
@@ -43,6 +81,8 @@ function startListen() {
             startflag = true;
         }
     });
+    show_initMsg();
+    listenBtn.innerHTML = "Listening.."
     console.log("initiated");
 }
 var req_otpShow = document.getElementById("otpShow");
@@ -53,6 +93,13 @@ function processClaim(sid, name) {
     xhttp.onload = function() {
         var xhhtp_res = JSON.parse(this.responseText);
         if (xhhtp_res["STATUS"] == "SUCCESS") {
+            show_req();
+            if(req_otpShow.innerHTML == ""){
+                anime({
+                    targets : listenBtn,
+                    translateY: '+=0.4em',
+                })
+            }
             req_name.innerText = "Welcome "+name+"!";
             req_otpShow.innerText = "OTP: "+xhhtp_res["OTP"];
             console.log(xhhtp_res["OTP"]);

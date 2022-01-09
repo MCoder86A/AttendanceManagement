@@ -11,6 +11,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://nulphary.sirv.com/Images/fabicon.png" type="image/png" sizes="16x16">
   <title>Regify-Teacher dashboard</title>
   <link rel="stylesheet" href="./s_list.css?v=1.0.2">
 </head>
@@ -25,11 +26,6 @@
                             } ?></div>
     </div>
   </div>
-  <!-- <div class="header">
-      <div class="name">Name</div>
-      <div class="roll">Roll</div>
-      <div class="p_percent">Present(%)</div>
-  </div> -->
   <div class="dash">
     <div class="col1">
       <table>
@@ -50,11 +46,11 @@
         $res = $stmt->get_result();
 
         while ($row = $res->fetch_assoc()) {
-          if("NOTP_".$sub == 0){
+          if($row["NOTP_".$sub] == 0){
             $p_percnt = 0;
           }
           else{
-            $p_percnt = ("NOP_".$sub/"NOTP_".$sub)/100;
+            $p_percnt = ($row["NOP_".$sub]/$row["NOTP_".$sub])*100;
           }
 
           printf('<tr>

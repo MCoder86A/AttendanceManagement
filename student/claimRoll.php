@@ -20,8 +20,23 @@
 
     $database = $database->getReference('users/');
     $res = $database->getValue();
+
+    require("../db.php");
+        
+    $name = $_SESSION["userinfo"]["userinfo"]["emailid"];
+    
+    $q = "SELECT cflag from STUDENTS where EMAILID = '".$sid."'";
+    $stmt = $conn->prepare($q);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_array();
+    $isAlreadyClaim = $row["cflag"];
+
     if(gettimeofday()["sec"]-$res["time"]<10&&$res["sid"]==$sid){
         $jsonObj["status"] = "TOOFREQ";
+    }
+    else if($isAlreadyClaim){
+        $jsonObj["status"] = "ACLAIMED";
     }
     else{
         $otp = strval(random_int(1000,9999));

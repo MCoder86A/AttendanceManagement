@@ -31,7 +31,7 @@
             $NOTP = $row[0];
             $NOP = $row[1]+1;
 
-            $ssql =  $conn->prepare("UPDATE STUDENTS SET NOP_".$SUB."=?  WHERE EMAILID=?");
+            $ssql =  $conn->prepare("UPDATE STUDENTS SET cflag = 1, NOP_".$SUB."=?  WHERE EMAILID=?");
             $ssql->bind_param("is", $NOP, $_emailID);
             $ssql->execute();
         }

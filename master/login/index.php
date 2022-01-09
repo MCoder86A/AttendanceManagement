@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Regify - registering childrens daily pressence</title>
-        <link rel="icon" href="../../asset/image/fabicon.png" type="image/png" sizes="16x16">
+        <link rel="icon" href="https://nulphary.sirv.com/Images/fabicon.png" type="image/png" sizes="16x16">
         <link rel="stylesheet" href="../../asset/style/index.css?version=0.00001">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
