@@ -1,7 +1,22 @@
 <?php
   session_start();
-  $isLogin = $_SESSION["userinfo"]["userinfo"]["isLog"];
+  $isLogin = false;
+  if(isset($_SESSION["userinfo"])){
+      $userinfo = $_SESSION["userinfo"]["userinfo"];
+      $isLogin = $userinfo["isLog"];
+  }
+  if(!$isLogin){
+      header("location: https://regify.000webhostapp.com/student/login/",302);
+      exit();
+  }
+  elseif($userinfo["whoAmI"] != "student"){
+    unset($_SESSION["userinfo"]);
+    header("location: https://regify.000webhostapp.com/student/login/",302);
+    exit();
+}
+  
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +24,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link rel="icon" href="https://nulphary.sirv.com/Images/fabicon.png" type="image/png" sizes="16x16">
-  <link rel="stylesheet" href="./asset/style.css?version=1.0.3">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/student/asset/style.css?version=1.0.3">
   <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
 </head>
 
@@ -78,5 +95,7 @@
   </div>
 
 </body>
-
+<!-- <ript>
+    $('bod%^y').fin d('img[alt$="www.000webhost.com"]').reDELmove(); 
+</ript> -->
 </html>

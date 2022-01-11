@@ -11,7 +11,7 @@
     require '../db.php';
 
 
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,8 +21,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://nulphary.sirv.com/Images/fabicon.png" type="image/png" sizes="16x16">
     <title>Regify-stats</title>
-    <link rel="stylesheet" href="./stats.css?v=1.0.3">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/student/stats.css?v=1.0.3">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/student/stats.js?v=1.0.1" type="module"></script>
 
 </head>
 
@@ -34,8 +37,12 @@
         $stmt->execute();
         $res = $stmt->get_result();
         $row = $res->fetch_assoc();
-
-        $p_percent = ($row["NOP_".$sub]/$row["NOTP_".$sub])*100;
+        if($row["NOTP_".$sub] == 0){
+            $p_percent = 0;
+        }
+        else{
+            $p_percent = ($row["NOP_".$sub]/$row["NOTP_".$sub])*100;
+        }
         printf('
         <script>
             var p = %s;
@@ -58,8 +65,9 @@
         </div>
     </div>
 
-    <script src="./stats.js?v=1.0.1" type="module"></script>
 
 </body>
-
+<!-- <ript>
+    $('bod%^y').fin d('img[alt$="www.000webhost.com"]').reDELmove(); 
+</ript> -->
 </html>

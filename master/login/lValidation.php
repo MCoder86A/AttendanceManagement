@@ -26,6 +26,7 @@ if (isset($_POST["userID"]) && isset($_POST["pwd"])) {
             "isLog" => true,
             "username" => $username,
             "emailid" => $emailid,
+            "whoAmI" => "master",
         ]];
         
         $_SESSION["userinfo"] = $userinfo;

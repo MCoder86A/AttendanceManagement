@@ -3,6 +3,12 @@
     $db_username = "mrin";
     $db_password = "12345678";
     $db_dbname = "regify";
+
+    // $db_servername = "sql311.epizy.com";
+    // $db_username = "epiz_30698860";
+    // $db_password = "QsdSbkBbfTWW";
+
+    // $db_dbname = "epiz_30698860_regify";
     
     $conn = new mysqli($db_servername, $db_username, $db_password, $db_dbname, 3306);
 

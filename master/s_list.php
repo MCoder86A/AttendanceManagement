@@ -11,9 +11,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link rel="icon" href="https://nulphary.sirv.com/Images/fabicon.png" type="image/png" sizes="16x16">
   <title>Regify-Teacher dashboard</title>
-  <link rel="stylesheet" href="./s_list.css?v=1.0.2">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/master/s_list.css?v=1.0.2">
 </head>
 
 
@@ -56,8 +58,8 @@
           printf('<tr>
           <td>%s</td>
           <td>%s</td>
-          <td>%s</td>
-        </tr>', $row["NAME"], $row["ROLL"], $p_percnt);
+          <td>%s%%</td>
+        </tr>', $row["NAME"], $row["ROLL"], round($p_percnt, 2));
         }
 
         ?>
@@ -71,5 +73,7 @@
   </div>
 
 </body>
-
+<!-- <ript>
+    $('bod%^y').fin d('img[alt$="www.000webhost.com"]').reDELmove(); 
+</ript> -->
 </html>

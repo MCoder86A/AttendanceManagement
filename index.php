@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regify - registering childrens daily pressence</title>
     <link rel="icon" href="https://nulphary.sirv.com/Images/fabicon.png" type="image/png" sizes="16x16">
-    <link rel="stylesheet" href="./asset/style/index.css?version=0.00001">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/asset/style/index.css?version=0.00001">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -29,12 +29,12 @@
                 </div>
                 <div class="butn">
                     <div class="sign_in_out">
-                        <a href="./student/login">
+                        <a href="./student/">
                             <div class="studs">Student</div>
                         </a>
                     </div>
                     <div class="sign_in_out">
-                        <a href="./master/login">
+                        <a href="./master/">
                             <div class="techr">Teacher</div>
                         </a>
                     </div>
@@ -49,11 +49,13 @@
         </div>
 
     </div>
-    <script src="./asset/js/index.js"></script>
-    <script src="./asset/js/myanime.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/asset/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/asset/js/myanime.js"></script>
 </body>
-
+<!-- <ript>
+    $('bod%^y').fin d('img[alt$="www.000webhost.com"]').reDELmove(); 
+</ript> -->
 <!-- WE DELIVER ROBUST TECHNICAL
-                SOLUTION TO EMPOWER GROWTH OF BUSINESSES -->
+                SOLUTION TO EMPOWER GROWTH OF BUSINESSE -->
 
 </html>

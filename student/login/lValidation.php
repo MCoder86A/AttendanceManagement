@@ -26,7 +26,8 @@ if (isset($_POST["userID"]) && isset($_POST["pwd"])) {
                                     "isLog" => true,
                                     "username" => $username,
                                     "emailid" => $emailid,
-                                    "standard" => $standard
+                                    "standard" => $standard,
+                                    "whoAmI" => "student",
                                 ]];
         $_SESSION["userinfo"] = $userinfo;
         $status["status"] = "success";
