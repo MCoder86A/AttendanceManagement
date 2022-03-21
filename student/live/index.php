@@ -59,9 +59,11 @@
     </div>
     <div class="msg" id="msg">Succesfully claimed</div>
 </div>
+<script>
+    var otpBtn = document.getElementById("otpbtn");
+    otpBtn.addEventListener("click", otpSubmit, false);
+</script>
 
-
-</body>
 <!-- <ript>
     $('bod%^y').fin d('img[alt$="www.000webhost.com"]').reDELmove(); 
 </ript> -->

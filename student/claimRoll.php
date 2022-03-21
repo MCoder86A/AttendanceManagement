@@ -32,7 +32,8 @@
     $row = $result->fetch_array();
     $isAlreadyClaim = $row["cflag"];
 
-    if(gettimeofday()["sec"]-$res["time"]<10&&$res["sid"]==$sid){
+    
+    if($res["status"]=="CLAIM"&&gettimeofday()["sec"]-$res["time"]<10&&$res["sid"]==$sid){
         $jsonObj["status"] = "TOOFREQ";
     }
     else if($isAlreadyClaim){
@@ -57,6 +58,7 @@
             'time' => $time["sec"],
            ]);
     }
+    
     print_r(json_encode($jsonObj));
     
 ?>

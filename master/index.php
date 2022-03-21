@@ -80,7 +80,6 @@
     </div>
   </div>
 
-</body>
 <!-- <ript>
     $('bod%^y').fin d('img[alt$="www.000webhost.com"]').reDELmove(); 
 </ript> -->

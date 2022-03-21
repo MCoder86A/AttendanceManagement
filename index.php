@@ -51,7 +51,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/asset/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/asset/js/myanime.js"></script>
-</body>
+
 <!-- <ript>
     $('bod%^y').fin d('img[alt$="www.000webhost.com"]').reDELmove(); 
 </ript> -->
