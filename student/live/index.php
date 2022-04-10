@@ -19,7 +19,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/student/live/asset/style.css?v=1.0.4">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@2/student/live/asset/style.css?v=1.0.4">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <title>Live_roll_call</title>
         <?php
@@ -29,7 +29,7 @@
         </script>', $sub, $std);
         ?>
         <!-- <script src="./asset/script.js?version=1.0.14"></script> -->
-        <script src="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/student/live/asset/script.js?version=1.0.9"></script>
+        <script src="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@2/student/live/asset/script.js?version=1.0.9"></script>
 </head>
 
 <body>

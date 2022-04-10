@@ -26,13 +26,13 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link rel="icon" href="https://nulphary.sirv.com/Images/fabicon.png" type="image/png" sizes="16x16">
   <title>Regify-Teacher dashboard</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@1.0/master/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MCoder86A/cdn@2/master/style.css">
   <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
 </head>
 
 
 <body>
-  <div class="bar"></div>
+  <!-- <div class="bar"></div> -->
   <div class="head">
     <div class="col1">
       <div class="name">Hi! <?php if ($isLogin) {
