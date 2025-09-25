@@ -1,8 +1,7 @@
 
-# Regify
+# Online Attendance Management
 
-Online Attendance Management System which is
-developed for student’s daily attendance. It helps to maintain the accurate record and generate summarized student attendance reports for the
+Developed for student’s daily attendance. It helps to maintain the accurate record and generate summarized student attendance reports for the
 students
 
 ## Demo
